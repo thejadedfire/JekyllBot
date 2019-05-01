@@ -1,12 +1,10 @@
 const Discord = require('discord.js');
 const { Client, Attachment } = require('discord.js');
 const client = new Discord.Client();
+const cameOnlineAt = Date.now();
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-  const channel = member.guild.channels.find(ch => ch.name === 'servant-quarters');
-  const date = Date.now();
-  channel.send("I came online at " + date.toDateString() + ", " + date.toTimeString());
 });
 
 client.on('message', msg => {
@@ -21,7 +19,9 @@ client.on('message', msg => {
       //var emoji = msg.author.guild.emojis.find(em => emoji.name === "shame");
       //chan.send(emoji);
       chan.send("Fashionable.", attachment);
-  }
+  } else if (msg.content === 'j!online'){
+             let chan = msg.channel; 
+      chan.send("I came online at " + cameOnlineAt.toDateString() + ", " + cameOnlineAt.toTimeString());
 });
 client.on('message', msg=>{
   if (!msg.author.bot && msg.content.startsWith("Repeat after me")){
