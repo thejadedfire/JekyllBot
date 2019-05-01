@@ -1,0 +1,25 @@
+{
+
+  "name": "TestBot",
+
+  "description": "Testing Jekyllbot",
+
+  "version": "0.0.0",
+
+  "main": "TestBot.js",
+
+  "scripts": {
+
+    "start": "node TestBot.js"
+
+  },
+
+  "dependencies": {
+
+    "discord.js": "11.1.0",
+
+    "request": "2.81.0"
+
+  }
+
+}
