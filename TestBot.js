@@ -18,14 +18,7 @@ client.on('message', message => {
 
        message.reply('pong');
 
-       }else if (msg.content === "Gucci"){
-      let chan = msg.channel;
-      const attachment = new Attachment('https://i.imgur.com/Zbqj2lW.jpg');
-      //var emoji = msg.author.guild.emojis.find(em => emoji.name === "shame");
-      //chan.send(emoji);
-      chan.send("Fashionable.", attachment);
-  }
-
+       }
 });
 
  
