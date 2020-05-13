@@ -23,12 +23,14 @@ client.on('message', message => {
 
 	if (command === 'ping') {
 		message.channel.send('Pong.');
-	} else if (command === 'beep') {
+	}
+	if (command === 'beep') {
 		message.channel.send('Boop.');
-	} else if (command === 'gucci'){
-    const attachment = new Discord.MessageAttachment('gucciKyll.png');
-    message.channel.send(`Fashionable.`, attachment);
-  }
+	}
+	if (command === 'gucci'){
+    		const attachment = new Discord.MessageAttachment('gucciKyll.png');
+    		message.channel.send(`Fashionable.`, attachment);
+	}
 });
 
 
