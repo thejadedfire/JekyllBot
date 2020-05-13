@@ -27,10 +27,14 @@ client.on('message', message => {
 	if (command === 'beep') {
 		message.channel.send('Boop.');
 	}
+	if (command === 'help'){
+		message.channel.send('Available commands: ping, beep"');
+	}
 	if (command === 'gucci'){
+		console.log(message.author, " tried to run command gucci");
     		try {
 			const attachment = new Discord.MessageAttachment('./gucciKyll.png');
-    			message.channel.send(`Fashionable.`, attachment);
+    			message.channel.send(attachment);
 		} catch (err){
 			console.log(err)
 		}
