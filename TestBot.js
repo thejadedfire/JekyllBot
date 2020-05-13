@@ -28,7 +28,7 @@ client.on('message', message => {
 		message.channel.send('Boop.');
 	}
 	if (command === 'gucci'){
-    		const attachment = new Discord.MessageAttachment('gucciKyll.png');
+    		const attachment = new Discord.MessageAttachment('./gucciKyll.png');
     		message.channel.send(`Fashionable.`, attachment);
 	}
 });
