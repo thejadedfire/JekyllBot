@@ -28,8 +28,12 @@ client.on('message', message => {
 		message.channel.send('Boop.');
 	}
 	if (command === 'gucci'){
-    		const attachment = new Discord.MessageAttachment('./gucciKyll.png');
-    		message.channel.send(`Fashionable.`, attachment);
+    		try {
+			const attachment = new Discord.MessageAttachment('./gucciKyll.png');
+    			message.channel.send(`Fashionable.`, attachment);
+		} catch (err){
+			console.log(err)
+		}
 	}
 });
 
