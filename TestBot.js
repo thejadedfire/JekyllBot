@@ -16,7 +16,8 @@ client.on('message', message => {
 
        message.reply('pong: Pushed from home!');
 
-     } else if (message.content === 'good boy'){
+     } 
+    if (message.content === 'good boy'){
        const emoji = message.guild.emojis.cache.find(emoji => emoji.name === 'ghostblood');
        message.react(emoji);
      }
