@@ -1,3 +1,4 @@
+const config = require('./config.json');
 const Discord = require('discord.js');
 
 const client = new Discord.Client();
@@ -11,16 +12,23 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
+  if (message.content === 'good boy'){
+    message.react('591290735194669093');
+  }
 
-    if (message.content === 'ping') {
+	if (!message.content.startsWith(prefix) || message.author.bot) return;
 
-       message.reply('pong: Pushed from home!');
+	const args = message.content.slice(prefix.length).split(/ +/);
+	const command = args.shift().toLowerCase();
 
-     } 
-    if (message.content === 'good boy') {
-       message.react('591290735194669093');
-     }
-
+	if (command === 'ping') {
+		message.channel.send('Pong.');
+	} else if (command === 'beep') {
+		message.channel.send('Boop.');
+	} else if (command === 'gucci'){
+    const attachment = new Discord.MessageAttachment('gucciKyll.png');
+    message.channel.send(`Fashionable.`, attachment);
+  }
 });
 
 
