@@ -10,6 +10,7 @@ const client = new Discord.Client();
 client.on('ready', () => {
 
     console.log('I am ready!');
+    client.user.setActivity('God');
 
 });
 
@@ -35,7 +36,7 @@ client.on('message', message => {
 	if (command === 'gucci'){
 		console.log(message.author, " tried to run command gucci");
     		try {
-			const attachment = new Attachment('https://i.imgur.com/Zbqj2lW.jpg');
+			const attachment = new Discord.MessageAttachment('https://i.imgur.com/Zbqj2lW.jpg');
     			message.channel.send("Fashionable.", attachment);
 		} catch (err){
 			console.log(err)
