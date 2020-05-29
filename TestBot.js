@@ -4,14 +4,16 @@ console.log(prefix);
 const Discord = require('discord.js');
 
 const client = new Discord.Client();
-
-
+console.log("Client loaded");
 
 client.on('ready', () => {
 
     console.log('I am ready!');
-    client.user.setActivity('God');
-
+    try{
+      client.user.setActivity('<activity>');
+    } catch (err){
+      console.log(err);
+    }
 });
 
 client.on('message', message => {
