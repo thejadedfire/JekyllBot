@@ -35,8 +35,8 @@ client.on('message', message => {
 	if (command === 'gucci'){
 		console.log(message.author, " tried to run command gucci");
     		try {
-			const attachment = new Discord.MessageAttachment('./gucciKyll.png');
-    			message.channel.send(attachment);
+			const attachment = new Attachment('https://i.imgur.com/Zbqj2lW.jpg');
+    			message.channel.send("Fashionable.", attachment);
 		} catch (err){
 			console.log(err)
 		}
