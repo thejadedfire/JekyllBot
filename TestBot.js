@@ -9,11 +9,9 @@ console.log("Client loaded");
 client.on('ready', () => {
 
     console.log('I am ready!');
-    try{
-      client.user.setActivity('<activity>');
-    } catch (err){
-      console.log(err);
-    }
+    client.user.setPresence({ activity: { name: 'God' }, status: 'idle' })
+      .then(console.log)
+      .catch(console.error);
 });
 
 client.on('message', message => {
