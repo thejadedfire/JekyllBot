@@ -1,6 +1,6 @@
 const config = require('./config.json');
 const { prefix } = require('./config.json');
-config.log(prefix);
+console.log(prefix);
 const Discord = require('discord.js');
 
 const client = new Discord.Client();
