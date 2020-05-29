@@ -1,4 +1,6 @@
-const prefix = "jb!"
+const config = require('./config.json');
+const { prefix } = require('./config.json');
+config.log(prefix);
 const Discord = require('discord.js');
 
 const client = new Discord.Client();
