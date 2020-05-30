@@ -14,10 +14,15 @@ client.on('ready', () => {
       .catch(console.error);
 });
 
-client.on('ready', () => {
-       client.user.setPresence({ game: { name: 'games, Mr. Stride!' }, status: 'dnd' })
-       console.log(`${client.user.username} is up and running!`);
-});
+client.on("ready", () => {
+    client.user.setPresence({
+        game: {
+            name: 'my code',
+            type: 'WATCHING'
+        },
+        status: 'dnd'
+    })
+})
 
 client.on('message', message => {
   if (message.content === 'good boy'){
