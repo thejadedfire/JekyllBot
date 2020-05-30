@@ -9,7 +9,7 @@ console.log("Client loaded");
 client.on('ready', () => {
 
     console.log('I am ready!');
-    client.user.setPresence({ activity: { name: 'God' }, status: 'idle' })
+    client.user.setPresence({ activity: { name: 'God' }, status: 'online' })
       .then(console.log)
       .catch(console.error);
 });
@@ -20,7 +20,7 @@ client.on("ready", () => {
             name: 'my code',
             type: 'WATCHING'
         },
-        status: 'dnd'
+        status: 'idle'
     })
 })
 
